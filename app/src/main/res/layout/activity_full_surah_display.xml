@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FullSurahDisplay">
+
+    <TextView
+    android:id="@+id/SurahName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text=""
+    android:textColor="@color/black"
+    android:textSize="20dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.061" />
+
+    <EditText
+        android:id="@+id/searchAyat"
+        android:layout_width="128dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Enter Ayat No"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toEndOf="@+id/SurahName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <ListView
+    android:id="@+id/FullSurah"
+    android:layout_width="380dp"
+    android:layout_height="629dp"
+    android:layout_marginTop="16dp"
+    android:background="#0E0E0E"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/SurahName" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="52dp"
+        android:layout_height="42dp"
+        android:foreground="@android:drawable/ic_menu_search"
+        android:onClick="onSearchClick"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/FullSurah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toEndOf="@+id/searchAyat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <!--<SearchView
+        android:id="@+id/searchView"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+        android:background="@color/gray"
+        android:foregroundTint="#070707"
+        android:onClick="onSearchClick"
+        app:layout_constraintBottom_toTopOf="@+id/FullSurah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toEndOf="@+id/SurahName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.857" /> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
